@@ -1,0 +1,76 @@
+{# tutorial/templates/people.html #}
+{% load render_table from django_tables2 %}
+{% load staticfiles %}
+
+<script src="{% static "js/jquery-1.12.0.js" %}"></script>
+<script src="{% static "js/tables-jquery.js" %}"></script>
+<!doctype html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="{% static "css/style.css" %}"/>
+        <script type="text/javascript" src="{% static "js/tableEdit.js" %}"></script>
+    </head>
+    <body>
+<body> 
+<form method="post" action="">
+    {%csrf_token%}
+    <table class="editableTable" cellspacing="2"> 
+        <thead> 
+            <tr> 
+                <th>  </th> 
+                <th colspan="3">  Required  </th> 
+                <th colspan="3">  Additional Trials  </th> 
+                <th></th> 
+                <th>  </th> 
+            </tr> 
+        </thead> 
+        <tbody> 
+            <tr> 
+                <td>Trial No.</td> 
+                <td>1</td>
+                <td>2</td> 
+                <td>3</td> 
+                <td>4</td> 
+                <td>5</td> 
+                <td>6</td> 
+            </tr> 
+            <tr> 
+                <td>Mass of KHP (g)</td> 
+                <td> </td> 
+                <td> </td> 
+                <td> </td>
+                <td> </td>
+                <td> </td>
+                <td> </td>
+            </tr> 
+            <tr> 
+                <td>Volume of NaOH</td> 
+                <td> </td> 
+                <td> </td> 
+                <td> </td>
+                <td> </td>
+                <td> </td>
+                <td> </td>
+            </tr> 
+            <tr> 
+                <td>Concentration of NaOH (M) (report 5 decimal places)</td> 
+                <td> </td> 
+                <td> </td> 
+                <td> </td>
+                <td> </td>
+                <td> </td>
+                <td> </td>
+            </tr> 
+        </tbody> 
+        <input type="hidden" name="name" value="your value"/>
+    </table> 
+    <input type="submit" value="Submit"/>
+</form>
+</body>
+</html>
+
+<button id="about-btn"> Click Me - I'm Javascript on Speed</button>
+
+<p>This is a example</p>
+
+<p>This is another example</p>
