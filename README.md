@@ -3,4 +3,5 @@
 
 admin info:
 
-admin: admin    password: theprayingmanis
+admin: admin    
+password: theprayingmanis
