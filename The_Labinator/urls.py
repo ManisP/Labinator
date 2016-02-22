@@ -20,5 +20,6 @@ urlpatterns = [
     url(r'^labs/', include('labs.urls')),
     url(r'^testLab/', include('testLab.urls')),
     url(r'^polls/', include('polls.urls')),
+    url(r'^myapp/', include('myapp.urls')),
     url(r'^admin/', admin.site.urls),
 ]

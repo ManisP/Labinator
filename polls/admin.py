@@ -1,5 +1,5 @@
 from django.contrib import admin
-from polls.models import Question, Choice
+from polls.models import Question, Choice, Lab
 # Register your models here.
 
 
@@ -19,3 +19,4 @@ class QuestionAdmin(admin.ModelAdmin):
     search_fields = ['question_text']
 
 admin.site.register(Question, QuestionAdmin)
+admin.site.register(Lab)

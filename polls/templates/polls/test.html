@@ -1,15 +1,10 @@
-{% load staticfiles %}
-
-<link rel="stylesheet" type="text/css" href="{% static 'polls/style.css' %}" />
-
-{% if latest_question_list %}
+{% if latest_labs %}
 <ul>
-    {% for question in latest_question_list %}
-    <li><a href="{% url 'polls:detail' question.id %}">{{ question.question_text }}</a></li>
+    {% for lab in latest_labs %}
+    <li><a href="{% url 'polls:lab' lab.id %}">{{ lab.lab_name }}</a></li>
     {% endfor %}
-    <li><a href="{% url 'polls:test' %}"> Help me out here guys </a></li>
 
 </ul>
 {% else %}
-<p>No polls are available.</p>
+<p>Failed to get available labs</p>
 {% endif %}

@@ -1,0 +1,5 @@
+<ul>
+{% for submission in lab.submission_set.all %}
+    <li>{{ submission.student_name }} with {{ submission.student_email }} they give this many $#@^'s '{{ submission.input_int }}</li>
+{% endfor %}
+</ul>

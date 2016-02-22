@@ -1,0 +1,11 @@
+<h1>{{ lab.lab_name }}</h1>
+
+{% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
+
+<form action="{% url 'polls:submit' lab.id %}" method="post">
+  {% csrf_token %}
+  {{lab.question}} <input type="text" name="input_int"><br>
+	Student Name: <input type="text" name="student_name"><br>
+	Student Email: <input type="text" name="student_email"><br>
+	<input type="submit" value="Submit" />
+</form>
